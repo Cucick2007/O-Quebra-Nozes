@@ -1,0 +1,225 @@
+Novidade! Atalhos do teclado … Os atalhos de teclado do Drive foram atualizados para oferecer navegação por letras iniciais
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Quebra-Nozes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(img/red_background_theatre_scene_by_lyotta_d5yjiea.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }  
+        .cad {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #723b3bc5;
+            padding: 25px;
+            border-radius: 15px;
+            color: rgb(0, 0, 0);
+            width: 17%;
+        }
+        fieldset {
+            border: 3px solid #DAA520;
+        }
+        legend {
+            border: 1px solid rgb(116, 0, 0);
+            padding: 10px;
+            text-align: center;
+            background-color: #d3a738;
+            border-radius: 5px;
+            color: antiquewhite;
+        }
+        .continue-button button {
+            --color: rgba(116, 0, 0, 0.67);
+           font-family: inherit;
+           display: inline-block;
+           width: 6em;
+           height: 2.6em;
+          line-height: 2.5em;
+          margin: 20px;
+            position: relative;
+          cursor: pointer;
+         overflow: hidden;
+          border: 2px solid var(--color);
+           transition: color 0.5s;
+           z-index: 1;
+          font-size: 17px;
+          border-radius: 6px;
+           font-weight: 500;
+           color: var(--color);
+        }
+  
+        button:before {
+         content: "";
+         position: absolute;
+         z-index: -1;
+         background: var(--color);
+         height: 150px;
+         width: 200px;
+         border-radius: 50%;
+        }
+  
+        button:hover {
+         color: #9a4040;
+        }
+  
+        button:before {
+         top: 100%;
+         left: 100%;
+         transition: all 0.7s;
+        }
+  
+        button:hover:before {
+         top: -30px;
+         left: -30px;
+        }
+  
+        button:active:before {
+         background: #702929;
+         transition: background 0s;
+        }
+        
+        .continue-button button:hover {
+            background-color: #6C2929;
+            color: rgb(0, 0, 0);
+        }
+        .continue-button button a {
+            text-decoration: none;
+            font-size: 0.93rem;
+            font-weight: 500;
+            color: rgb(0, 0, 0);
+        }
+        input {
+            position: relative;
+        }
+        .ab {
+            background: rgba(130, 32, 32, 0.55);
+            border-radius: 15px;
+            outline: none;
+            height: 100%;
+            border-bottom: 1px solid rgb(92, 23, 23);
+            color: rgb(0, 0, 0);
+            font-size: 15px;
+            letter-spacing: 2px;
+            width: 100%;
+        }
+        @media screen and (max-width: 1330px) {
+            .cad {
+                width: 50%;
+            }
+            fieldset {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="obterIngresso(); return false;"></form>
+    <div class="cad">
+        <form id="obterIngresso" action="">
+            <fieldset>
+                <legend><b>Cadastro</b></legend>
+                <br>
+
+                <label for="firstname">Primeiro Nome:</label>
+                <input id="firstname" type="text" placeholder="Digite seu Nome" class="ab" required>
+                <br><br>
+
+                <label for="lastname">Sobrenome:</label>
+                <input id="lastname" type="text" placeholder="Digite seu Sobrenome" class="ab" required>
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" placeholder="seuemail@gmail.com" class="ab" required>
+                <br><br>
+                
+                <label for="senha">Senha:</label>
+                <input id="password" type="password" placeholder="Digite sua Senha" class="ab" required>            
+                <br><br>
+
+                <label for="telefone">Telefone:</label>
+                <input id="tel" type="tel" placeholder="(xx) xxxxx-xxxx" class="ab" required>             
+                <br><br>
+
+                <label for="cidade">Cidade:</label>
+                <input id="cidade" type="text" placeholder="Digite sua Cidade" class="ab" required>
+                <br><br>
+
+                <label>Estado:</label> <br>
+                <select name="estado" id="estado" class="ab" required>
+                    <option value="" disabled selected>Selecione seu estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="DF">Distrito Federal</option>
+                </select>
+                <br><br>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h4>Gênero</h4>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" id="male" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" id="other" name="gender">
+                            <label for="other">Outro</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" id="preferNotSay" name="gender">
+                            <label for="preferNotSay">Prefiro não dizer</label>
+                        </div>
+
+                        <br><br>
+
+                        <div class="continue-button">
+                            <button type="submit"><a href="#">Continuar</a></button>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
